@@ -1,0 +1,23 @@
+@mixin sec-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+// @mixin flex(dis){
+//     display:
+// }
+
+@mixin card-style{
+    display: flex;
+    justify-content: center;
+    align-items:start
+}
+
+@mixin btn{
+    background-color:$color-blue;
+    font-weight:400;
+    text-decoration: none;
+    color: $color-white;
+}

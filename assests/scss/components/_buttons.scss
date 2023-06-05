@@ -1,0 +1,11 @@
+.search-btn{
+    @include btn;
+    padding:14px 40px;
+}
+
+.seemore-btn{
+
+    @include btn;
+    padding: 12px 20px;
+}
+

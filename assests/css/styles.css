@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.heading-lg {
+  font-size: 50px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  line-height: normal;
+}
+
+.heading-md {
+  font-size: 35px;
+  color: #102746;
+  font-family: "Lato", sans-serif;
+}
+.heading-md::after {
+  content: "";
+  width: 52%;
+  display: block;
+  border-bottom: 3px solid #1b7dff;
+  margin-top: 6px;
+}
+
+.heading-sm {
+  font-size: 30px;
+  color: #102746;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+}
+
+.txt-lg {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+}
+
+.text-md-black {
+  font-size: 18px;
+  color: #000000;
+  font-family: "Lato", sans-serif;
+}
+
+.txt-md-white {
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+}
+
+.txt-sm-black {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  line-height: 24px;
+}
+
+.txt-sm-white {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  line-height: 24px;
+}
+
+.primary-link {
+  font-size: 16px;
+  color: #1b7dff;
+  font-family: "Lato", sans-serif;
+}
+.primary-link:hover {
+  color: #000000;
+}
+
+.search-btn {
+  background-color: #1b7dff;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 14px 40px;
+}
+
+.seemore-btn {
+  background-color: #1b7dff;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 20px;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.mb-77 {
+  margin-bottom: 77px;
+}
+
+.hero-main {
+  height: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+.hero picture {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.hero picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.hero .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-25%, -50%);
+  width: 42%;
+}
+.hero .hero-content h1 {
+  margin-bottom: 22px;
+}
+.hero .hero-content p {
+  padding-right: 73px;
+  margin-bottom: 59px;
+}
+
+/* ==================
+------ PLaces to visit ------
+================== */
+.top-places {
+  padding: 121px 0;
+}
+.top-places .top-place-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-places .top-place-main {
+  margin-top: 36px;
+}
+.top-places .top-place-img {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.top-places .top-place-img figure {
+  position: relative;
+}
+.top-places .top-place-img figure figcaption {
+  position: absolute;
+  bottom: 29px;
+  left: 27px;
+  z-index: 2;
+}
+.top-places .top-place-img figure::after {
+  content: "";
+  background-color: rgba(21, 24, 36, 0.6);
+  opacity: 0.5;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ==================
+------ image and text ------
+================== */
+.place-info {
+  margin-bottom: 50px;
+}
+
+.place-info-main {
+  display: flex;
+}
+.place-info-main .place-info-main-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  text-align: start;
+}
+.place-info-main .place-info-main-content .place-info-content {
+  margin-left: 31px;
+}
+.place-info-main .place-info-main-content .place-info-content p {
+  width: 80%;
+  margin: 45px 0 58px 0;
+}
+.place-info-main .place-info-main-image {
+  width: 100%;
+}
+
+/* ==================
+------ place cards ------
+================== */
+.top-places-card-content {
+  margin-top: 64px;
+}
+
+.place-cards .top-place-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-places-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.3%;
+}
+.top-places-main li {
+  width: 30%;
+  display: inline-block;
+  margin-bottom: 58px;
+}
+
+.card-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-info-content p {
+  margin: 45px 0 31px 0;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.navbar .main-nav {
+  margin-top: 5px;
+  display: flex;
+}
+.navbar .logo {
+  margin: 0;
+  font-size: 1.45em;
+}
+
+form {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+form .form-main {
+  padding: 22px 0;
+  border: 1px solid #fff;
+}
+form .form-main input {
+  -webkit-appearance: radio;
+     -moz-appearance: radio;
+          appearance: radio;
+}
+form .form-main #age {
+  accent-color: white;
+}/*# sourceMappingURL=styles.css.map */

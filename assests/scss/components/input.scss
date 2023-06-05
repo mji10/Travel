@@ -1,0 +1,19 @@
+form {
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    .form-main {
+
+        padding: 22px 0;
+        border: 1px solid #fff;
+
+        input {
+            appearance: radio;
+        }
+
+        #age {
+            accent-color: white;
+        }
+    }
+}

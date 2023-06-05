@@ -1,0 +1,73 @@
+
+.heading-lg{
+    font-size:$heading-lg;
+    color:$color-white;
+    font-family: $font-family;
+    line-height: normal;
+}
+
+.heading-md{
+    font-size:$heading-md;
+    color:$color-yankees-blue;
+    font-family: $font-family;
+
+    &::after{
+        content: "";
+        // background-color:$color-blue;
+        width:52%;
+        display: block;
+        border-bottom: 3px solid $color-blue;
+        margin-top: 6px;
+
+    }
+}
+
+.heading-sm{
+    font-size:$heading-sm;
+    color:$color-yankees-blue;
+    font-family: $font-family;
+    font-weight: 600;
+}
+
+.txt-lg{
+    font-size:$txt-lg;
+    color: $color-white;
+    font-family: $font-family;
+}
+
+.text-md-black{
+    font-size:$txt-md;
+    color:$color-black;
+    font-family: $font-family;
+}
+
+.txt-md-white{
+    font-size:$txt-md;
+    color:$color-white;
+    font-family: $font-family;
+}
+
+.txt-sm-black{
+    font-size:$txt-sm;
+    color:$color-black;
+    font-family: $font-family;
+    line-height: 24px;
+}
+
+.txt-sm-white{
+    font-size:$txt-sm;
+    color:$color-white;
+    font-family: $font-family;
+    line-height: 24px;
+}
+
+.primary-link{
+    font-size:$txt-sm;
+    color:$color-blue;
+    font-family: $font-family;
+
+    &:hover{
+        color:$color-black
+    }
+}
+

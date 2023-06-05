@@ -1,0 +1,190 @@
+// @import
+
+.container {
+    max-width: 1440px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.mb-77{
+    margin-bottom: $mb-77;
+}
+
+.hero-main {
+    height: 100%;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+
+    picture {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-25%, -50%);
+        width: 42%;
+
+        h1 {
+            margin-bottom: 22px;
+        }
+
+        p {
+            padding-right: 73px;
+            margin-bottom: 59px;
+        }
+    }
+}
+
+/* ==================
+------ PLaces to visit ------
+================== */
+
+.top-places {
+    padding: 121px 0;
+
+    .top-place-head {
+        @include sec-head;
+    }
+
+    .top-place-main{
+        margin-top:36px
+    }
+
+    .top-place-img {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        figure {
+            position: relative;
+
+            figcaption {
+                position: absolute;
+                bottom: 29px;
+                left:27px;
+                z-index: 2;
+            }
+
+
+            &::after {
+                content: "";
+                background-color: $color-eerieb-black;
+                opacity: 0.5;
+                position: absolute;
+                left: 0px;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+            }
+
+        }
+    }
+}
+
+/* ==================
+------ image and text ------
+================== */
+
+.place-info{
+    margin-bottom:50px
+}
+
+.place-info-main{
+    display: flex;
+
+    .place-info-main-content{
+
+        @include card-style;
+        flex-direction: column;
+        text-align: start;
+        
+        .place-info-content{
+
+            margin-left: 31px;
+
+
+        p{
+            width: 80%;
+            margin:45px 0 58px 0;
+        }
+    }
+    }
+
+    .place-info-main-image{
+        width: 100%;
+    }
+}
+
+/* ==================
+------ place cards ------
+================== */
+
+.top-places-card-content{
+    margin-top: 64px
+}
+
+.place-cards{
+    .top-place-head {
+        @include sec-head;
+    }
+}
+
+.top-places-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.3%;
+
+    li{
+        width:30%;
+        display: inline-block;
+        margin-bottom: 58px;
+    }
+}
+
+.card-content{
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.card-info-content {
+
+    p{
+
+        margin: 45px 0 31px 0;
+    }
+}
+
+
+// .video{
+
+//     video{
+//         min-width: 100%;
+//         min-height: 50%;
+//     }
+// }
