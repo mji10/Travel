@@ -1,5 +1,6 @@
-// @import
-
+/* ==================
+------ Common ------
+================== */
 .container {
     max-width: 1440px;
     padding-left: 40px;
@@ -9,9 +10,21 @@
     height: 100%;
 }
 
-.mb-77{
+.ml-14{
+    margin-left:14px
+}
+
+.ml-26 {
+    margin-left: 26px;
+}
+
+.mb-77 {
     margin-bottom: $mb-77;
 }
+
+/* ==================
+------ Hero ------
+================== */
 
 .hero-main {
     height: 100%;
@@ -21,7 +34,16 @@
     position: relative;
     height: 100vh;
 
-    picture {
+    .hero-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-bg{
         display: block;
         position: absolute;
         top: 0;
@@ -29,7 +51,7 @@
         width: 100%;
         height: 100%;
 
-        img {
+        .hero-bg-img {
             width: 100%;
             height: 100%;
             -o-object-fit: cover;
@@ -39,19 +61,63 @@
 
     .hero-content {
         position: absolute;
-        top: 50%;
-        left: 25%;
-        transform: translate(-25%, -50%);
-        width: 42%;
+        top: 40%;
+        left: 41%;
+        transform: translate(-50%, -50%);
 
-        h1 {
+        .hero-heading {
             margin-bottom: 22px;
+            width: 80%;
         }
 
-        p {
+        .hero-description {
             padding-right: 73px;
             margin-bottom: 59px;
+            width: 70%;
         }
+    }
+}
+
+
+/* ==================
+------ Floating Info ------
+================== */
+
+.floating-content {
+    box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
+    padding: 93px 63px 100px 100px;
+    top: -200px;
+    position: relative;
+    background: #fff;
+
+    .heading-md-info {
+        margin-bottom: 120px;
+    }
+}
+
+.floating-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.3%;
+
+    .floating-main-content {
+        width: 30%;
+        display: inline-block;
+        margin-bottom: 58px;
+    }
+}
+
+.floating-main-content {
+    .floating-main-content-img {
+        margin-bottom: 37px;
+    }
+
+    .floating-main-content-heading {
+        margin-bottom: 26px;
+    }
+
+    .floating-main-content-description {
+        margin-bottom: 39px;
     }
 }
 
@@ -60,81 +126,79 @@
 ================== */
 
 .top-places {
-    padding: 121px 0;
+    padding-bottom: 121px;
+}
 
-    .top-place-head {
-        @include sec-head;
-    }
+.top-place-head {
+    @include flex(flex, space-between, center);
+}
 
-    .top-place-main{
-        margin-top:36px
-    }
+.top-place-main {
+    margin-top: 36px
+}
 
-    .top-place-img {
-        display: flex;
-        width: 100%;
-        gap: 10px;
-        justify-content: space-between;
-        margin-bottom: 10px;
+.top-place-img {
+    @include flex(flex, space-between, null);
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
 
-        figure {
-            position: relative;
+    .top-place-card {
+        position: relative;
 
-            figcaption {
-                position: absolute;
-                bottom: 29px;
-                left:27px;
-                z-index: 2;
-            }
+        .top-place-card-title {
+            position: absolute;
+            bottom: 29px;
+            left: 27px;
+            z-index: 2;
+        }
 
 
-            &::after {
-                content: "";
-                background-color: $color-eerieb-black;
-                opacity: 0.5;
-                position: absolute;
-                left: 0px;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-
-            }
+        &::after {
+            content: "";
+            background-color: $color-eerieb-black;
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 100%;
+            height: 100%;
 
         }
+
     }
 }
+
 
 /* ==================
 ------ image and text ------
 ================== */
 
-.place-info{
-    margin-bottom:50px
+.place-info {
+    margin-bottom: 50px
 }
 
-.place-info-main{
+.place-info-main {
     display: flex;
 
-    .place-info-main-content{
+    .place-info-main-content {
 
-        @include card-style;
+        @include flex(flex, center, start);
         flex-direction: column;
         text-align: start;
-        
-        .place-info-content{
+
+        .place-info-content {
 
             margin-left: 31px;
 
 
-        p{
-            width: 80%;
-            margin:45px 0 58px 0;
+            p {
+                width: 80%;
+                margin: 45px 0 58px 0;
+            }
         }
     }
-    }
 
-    .place-info-main-image{
+    .place-info-main-image {
         width: 100%;
     }
 }
@@ -143,48 +207,88 @@
 ------ place cards ------
 ================== */
 
-.top-places-card-content{
+.top-places-card-content {
     margin-top: 64px
 }
 
-.place-cards{
+.place-cards {
     .top-place-head {
-        @include sec-head;
+        @include flex(flex, space-between, center);
     }
 }
 
-.top-places-main{
+.top-places-main {
     display: flex;
     flex-wrap: wrap;
     gap: 3.3%;
 
-    li{
-        width:30%;
+   .top-place-main-content {
+        width: 30%;
         display: inline-block;
         margin-bottom: 58px;
     }
 }
 
-.card-content{
-    img{
+.card-content-banner {
+    position: relative;
+
+    .card-content-banner-img {
         width: 100%;
         height: 100%;
+        position: relative;
     }
+
+    .top-place-fig {
+        position: absolute;
+        bottom: 2px;
+        background: $color-eerieb-black;
+        width: 100%
+    }
+}
+
+.top-place-fig {
+    .detail{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:16px 25px;
+      }
 }
 
 .card-info-content {
 
-    p{
+    .card-info-description {
 
         margin: 45px 0 31px 0;
+    }
+
+    .card-info-btn {
+        display: inline-block;
     }
 }
 
 
-// .video{
+/* ==================
+------ Video------
+================== */
 
-//     video{
-//         min-width: 100%;
-//         min-height: 50%;
-//     }
-// }
+.place-video {
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: $color-eerieb-black;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+    }
+
+    video {
+        object-fit: cover;
+        display: block;
+    }
+}

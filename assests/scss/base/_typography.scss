@@ -13,13 +13,18 @@
 
     &::after{
         content: "";
-        // background-color:$color-blue;
         width:52%;
         display: block;
         border-bottom: 3px solid $color-blue;
         margin-top: 6px;
 
     }
+}
+
+.heading-md-info{
+    font-size:$heading-md;
+    color:$color-yankees-blue;
+    font-family: $font-family;
 }
 
 .heading-sm{
@@ -59,15 +64,34 @@
     color:$color-white;
     font-family: $font-family;
     line-height: 24px;
+    text-decoration: none;
 }
 
 .primary-link{
     font-size:$txt-sm;
     color:$color-blue;
     font-family: $font-family;
+    text-decoration: none;
 
     &:hover{
         color:$color-black
+    }
+}
+
+.navbar-link{
+    font-size:$txt-md;
+    color:$color-white;
+    font-family: $font-family;
+}
+
+.description-link{
+    font-size:$txt-sm;
+    color:$color-white;
+    font-family: $font-family;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: underline;
     }
 }
 

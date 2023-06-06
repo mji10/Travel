@@ -1,0 +1,19 @@
+.hero-form {
+    color: #fff;
+    @include flex(flex,null,center);
+}
+
+.form-main {
+
+    padding: 22px 0;
+    border-bottom: 1px solid #fff;
+    margin-right: 30px;
+    width: 50%;
+
+    input[type="radio" i] {
+        appearance: radio;
+        accent-color: $color-blue;
+        margin-right: 23px;
+      
+    }
+}

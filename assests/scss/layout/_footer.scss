@@ -1,0 +1,39 @@
+footer {
+    background-color: $color-dark-black;
+    color: #bbb;
+    line-height: 1.5 !important;
+    padding: 50px 0 !important;
+
+    .ft-list {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+
+.ft-title {
+    padding-bottom: 10px;
+}
+
+.ft-main-logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer main */
+.ft-main {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-main-content {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.ft-main-item {
+    padding: 20px;
+}
