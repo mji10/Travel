@@ -4,6 +4,14 @@
     color:$color-white;
     font-family: $font-family;
     line-height: normal;
+
+    @include lg{
+        font-size:$heading-md;
+    }
+
+    @include sm{
+        font-size:$heading-md;
+    }
 }
 
 .heading-md{
@@ -19,6 +27,10 @@
         margin-top: 6px;
 
     }
+
+    @include sm{
+        font-size:$txt-lg;
+    }
 }
 
 .heading-md-info{
@@ -32,6 +44,10 @@
     color:$color-yankees-blue;
     font-family: $font-family;
     font-weight: 600;
+
+    @include sm{
+        font-size:$txt-lg;
+    }
 }
 
 .txt-lg{
@@ -74,7 +90,7 @@
     text-decoration: none;
 
     &:hover{
-        color:$color-black
+        color:$color-dark-black;
     }
 }
 
@@ -89,9 +105,5 @@
     color:$color-white;
     font-family: $font-family;
     text-decoration: none;
-
-    &:hover{
-        text-decoration: underline;
-    }
 }
 

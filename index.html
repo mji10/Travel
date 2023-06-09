@@ -12,19 +12,27 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container container-lg">
             <nav class="navbar">
                 <a href="javascript:void(0)"><img src="assests/img/odigo-logo.png" alt=""></a>
-                <ul class="main-nav">
-                    <li class="main-nav-links"><a href="javascript:void(0)"
-                            class="text-decoration-none navbar-link">Articles</a></li>
-                    <li class="main-nav-links"><a href="javascript:void(0)"
-                            class="text-decoration-none navbar-link">Locations</a></li>
-                    <li class="main-nav-links"><a href="javascript:void(0)"
-                            class="text-decoration-none navbar-link">Videos</a></li>
-                    <li class="main-nav-links"><a href="javascript:void(0)"
-                            class="text-decoration-none navbar-link">Sign in</a></li>
-                </ul>
+
+                <button type="button" class="navbar--toggler">
+                    <div class="line line__1"></div>
+                    <div class="line line__2"></div>
+                    <div class="line line__3"></div>
+                </button>
+                <div class="navbar-show">
+                    <ul class="main-nav">
+                        <li class="main-nav-links"><a href="javascript:void(0)"
+                                class="text-decoration-none navbar-link">Articles</a></li>
+                        <li class="main-nav-links"><a href="javascript:void(0)"
+                                class="text-decoration-none navbar-link">Locations</a></li>
+                        <li class="main-nav-links"><a href="javascript:void(0)"
+                                class="text-decoration-none navbar-link">Videos</a></li>
+                        <li class="main-nav-links"><a href="javascript:void(0)"
+                                class="text-decoration-none navbar-link">Sign in</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -32,7 +40,7 @@
     <main>
         <section class="hero">
             <div class="hero-main">
-                <div class="container">
+                <div class="container container-lg">
                     <div class="hero-content">
                         <h1 class="heading-lg hero-heading">Discover Amazing places in Japan</h1>
                         <p class="txt-sm-white hero-description">Jump off balcony, onto stranger's head. Chase ball of
@@ -43,15 +51,87 @@
                             attack
                             the child, open the door,</p>
 
-                        <form action="javascript:void(0)" class="hero-form">
-                            <div class="form-main">
-                                <input type="radio" id="age" name="age" value="60">
-                                <label for="age2" class="txt-lg label">What would you like to do?</label></div>
-                            <div class="form-main">
-                                <input type="radio" id="age" name="age" value="100">
-                                <label for="age3" class="txt-lg label">Where would you like to go?</label></div>
-                            <input type="Submit" value="SEARCH" class="search-btn">
+                        <!-- <form action="javascript:void(0)" class="main-form">
+                            <label class="form"><span class="form-icon"></span> <input type="text"
+                                    placeholder="What would you like to do?" class="text-md form-text"></label>
+
+                            <label class="form"><span class="form-icon"></span> <input type="text"
+                                    placeholder="Where would you like to go?" class="text-md  form-text"></label>
+
+                            <input type="Submit" value="SEARCH" class="search-btn txt-lg top-left">
+
+                        </form> -->
+
+
+
+                        <!-- <form action="javascript:void(0)" class="main-form">
+                            <label class="form"><span class="form-icon"></span>
+                                <div class="input-field">
+                                    <input type="text" id="name" required class="text-input" />
+                                    <label for="name" class="input-head txt-md-white">What would you like to do?</label>
+                                </div>
+                            </label>
+
+                            <label class="form"><span class="form-icon"></span>
+                                <div class="input-field">
+                                    <input type="text" id="class" required class="text-input" />
+                                    <label for="class" class="input-head txt-md-white">Where would you like to
+                                        go?</label>
+                                </div>
+                            </label>
+
+                            <input type="Submit" value="SEARCH" class="search-btn txt-lg top-left">
+
+                            <div class="container">
+                                <label class="radio-button-container" disabled>
+                                  <input type="radio" checked="checked" name="radio">
+                                  <div class="input-field">
+                                  <input type="text" id="name2" required class="text-input" />
+                                  <label for="name2" class="input-head txt-md-white">What would you like to do?</label>
+                                   <span class="checkmark"></span>
+                                </div>
+                                </label>
+                              
+                              </div>
+
+                        </form> -->
+
+
+                        <form action="javascript:void(0)" class="main-form">
+
+                            <div class="form-wrapper">
+                                <label class="radio-button-container" disabled>
+                                    <input type="radio" checked="checked" name="radio">
+                                    <div class="input-field">
+                                        <input type="text" id="name1" required class="text-input" />
+                                        <label for="name1" class="input-head txt-md-white">What would you like to
+                                            do?</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </label>
+
+                            </div>
+
+                            <div class="form-wrapper">
+                                <label class="radio-button-container" disabled>
+                                    <input type="radio" checked="checked" name="radio">
+                                    <div class="input-field">
+                                        <input type="text" id="name2" required class="text-input" />
+                                        <label for="name2" class="input-head txt-md-white">Where would you like to
+                                            go?</label>
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </label>
+
+                            </div>
+
+                            <input type="Submit" value="SEARCH" class="search-btn txt-lg top-left">
+
                         </form>
+
+
+
+
                     </div>
 
                 </div>
@@ -93,7 +173,8 @@
                             </li>
 
                             <li class="floating-main-content">
-                                <img src="assests/img/store.png" alt="stores" class="floating-main-content-img">
+                                <img src="assests/img/store.png" alt="stores" class="floating-main-content-img"
+                                    width="66" height="66">
                                 <h3 class="text-md-black floating-main-content-heading">Promoting Local Businesses</h3>
                                 <p class="txt-sm-black floating-main-content-description">Jump off balcony, onto
                                     stranger's
@@ -114,7 +195,7 @@
 
                 <div class="top-place-head">
                     <h2 class="heading-md">Get inspired for your next trip</h2>
-                    <a href="javascript:void(0)" class="primary-link btn-animate">VIEW ALL<i
+                    <a href="javascript:void(0)" class="primary-link btn-animate mbl-d-none">VIEW ALL<i
                             class="fa-solid fa-arrow-right fa-sm ml-26"></i></a>
                 </div>
 
@@ -122,13 +203,15 @@
                     <div class="top-place-img">
                         <a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/mount-fuji@3x.jpg" alt="Mount FUJI" style="width:100%">
+                                <img src="assests/img/mount-fuji@3x.jpg" alt="Mount FUJI" style="width:100%"
+                                    class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Mount Fuji</figcaption>
                             </figure>
                         </a>
                         <a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/kyoto@3x.jpg" alt="Kyoto" style="width:100%">
+                                <img src="assests/img/kyoto@3x.jpg" alt="Kyoto" style="width:100%"
+                                    class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Kyoto</figcaption>
                             </figure>
                         </a>
@@ -136,21 +219,26 @@
                     <div class="top-place-img">
                         <a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/tokyo@3x.jpg" alt="Tokyo" style="width:100%">
+                                <img src="assests/img/tokyo@3x.jpg" alt="Tokyo" style="width:100%"
+                                    class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Tokyo</figcaption>
                             </figure>
                         </a><a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/niigata@3x.jpg" alt="Trulli" style="width:100%">
+                                <img src="assests/img/niigata@3x.jpg" alt="Trulli" style="width:100%"
+                                    class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Niigata</figcaption>
                             </figure>
                         </a><a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/sapporo@3x.jpg" alt="Trulli" style="width:100%">
+                                <img src="assests/img/sapporo@3x.jpg" alt="Trulli" style="width:100%"
+                                    class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Sapporo</figcaption>
                             </figure>
                         </a>
                     </div>
+
+                    <a href="" class="seemore-btn mb-btn">view all</a>
                 </div>
             </div>
         </section>
@@ -174,7 +262,7 @@
                                 bed,
                                 for attack the child, open the door,</p>
                             <a href="javascript:void(0)" class="primary-link btn-animate">VIEW PREFECTURE<i
-                                    class="fa-solid fa-arrow-right fa-sm ml-26"></i></a>
+                                    class="fa-solid fa-arrow-right fa-sm ml-26 mb"></i></a>
                         </div>
                     </div>
                 </div>
@@ -239,7 +327,7 @@
                                     hide when guests come
                                     over. Being gorgeous with belly side up i could pee on this.</p>
 
-                                <a href="javascript:void(0)" class="seemore-btn card-info-btn">SEE MORE</a>
+                                <a href="javascript:void(0)" class="seemore-btn card-info-btn top-left">SEE MORE</a>
                             </div>
                         </li>
 
@@ -270,7 +358,7 @@
                                     hide when guests come
                                     over. Being gorgeous with belly side up i could pee on this.</p>
 
-                                <a href="javascript:void(0)" class="seemore-btn card-info-btn">SEE MORE</a>
+                                <a href="javascript:void(0)" class="seemore-btn card-info-btn top-left">SEE MORE</a>
                             </div>
                         </li>
 
@@ -301,7 +389,7 @@
                                     hide when guests come
                                     over. Being gorgeous with belly side up i could pee on this.</p>
 
-                                <a href="javascript:void(0)" class="seemore-btn card-info-btn">SEE MORE</a>
+                                <a href="javascript:void(0)" class="seemore-btn card-info-btn top-left">SEE MORE</a>
                             </div>
                         </li>
 
@@ -332,7 +420,7 @@
                                     hide when guests come
                                     over. Being gorgeous with belly side up i could pee on this.</p>
 
-                                <a href="javascript:void(0)" class="seemore-btn card-info-btn">SEE MORE</a>
+                                <a href="javascript:void(0)" class="seemore-btn card-info-btn top-left">SEE MORE</a>
                             </div>
                         </li>
 
@@ -363,7 +451,7 @@
                                     hide when guests come
                                     over. Being gorgeous with belly side up i could pee on this.</p>
 
-                                <a href="javascript:void(0)" class="seemore-btn card-info-btn">SEE MORE</a>
+                                <a href="javascript:void(0)" class="seemore-btn card-info-btn top-left">SEE MORE</a>
                             </div>
                         </li>
 
@@ -394,7 +482,7 @@
                                     hide when guests come
                                     over. Being gorgeous with belly side up i could pee on this.</p>
 
-                                <a href="javascript:void(0)" class="seemore-btn card-info-btn">SEE MORE</a>
+                                <a href="javascript:void(0)" class="seemore-btn card-info-btn top-left">SEE MORE</a>
                             </div>
                         </li>
                     </ul>
@@ -404,17 +492,22 @@
 
         <section class="video">
             <div class="place-video">
-                <video muted loop src="assests/img/exploring.mp4" width="100%" height="689px"></video>
+                <!-- <video muted loop src="assests/img/exploring.mp4" width="100%" height="689px"></video>
                 <div class="overlay-play-button__play"><span class="play_pause"><i
-                            class="fa-solid fa-play fa-2xl"></i></span>
-                </div>
+                            class="fa-solid fa-play fa-2xl"></i></span> -->
+
+                <iframe height="315" src="https://www.youtube.com/embed/OHAWwaYu2H0" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
             </div>
         </section>
     </main>
 
 
     <footer>
-        <div class="container">
+        <div class="container container-lg">
             <section class="ft-main font">
                 <div class=" ft-main-logo">
                     <a href="javascript:void(0)"><img src="assests/img/odigo-logo@3x.png" alt="" width="200px"></a>
@@ -465,6 +558,8 @@
             }
         };
     </script>
+
+    <script src="assests/js/script.js"></script>
 
 </body>
 

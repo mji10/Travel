@@ -18,7 +18,11 @@ footer {
 .ft-main-logo {
     width: 40%;
     display: flex;
-    justify-content: center;
+
+    @include sm{
+        width: 100%;
+        @include flex(flex,center,center)
+    }
 }
 
 /* Footer main */
@@ -26,12 +30,20 @@ footer {
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
+
+    @include sm{
+        flex-direction: column-reverse;
+    }
 }
 
 .ft-main-content {
-    display: flex;
     width: 60%;
-    justify-content: space-between;
+
+    @include flex(flex,space-between,null);
+
+    @include sm{
+        @include flex(flex,space-between,start);
+    }
 }
 
 .ft-main-item {

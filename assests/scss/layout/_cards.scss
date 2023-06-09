@@ -1,0 +1,131 @@
+/* ==================
+------ Floating Info ------
+================== */
+.floating-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.3%;
+
+    .floating-main-content {
+        width: 30%;
+        display: inline-block;
+        margin-bottom: 58px;
+
+        @include md{
+            width:48%;
+        }
+
+        @include sm{
+            width: 100%;
+            text-align: center;
+            padding: 25px;
+            margin-bottom: 0;
+        }
+    }
+
+
+    @include sm{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.floating-main-content {
+    .floating-main-content-img {
+        margin-bottom: 37px;
+    }
+
+    .floating-main-content-heading {
+        margin-bottom: 26px;
+    }
+
+    .floating-main-content-description {
+        margin-bottom: 39px;
+    }
+
+    // @include sm{
+    //     .mb-btn{
+    //         @include display(block);
+    //     }
+    // }
+}
+
+
+/* ==================
+------ place cards ------
+================== */
+
+.top-places-card-content {
+    margin-top: 64px
+}
+
+.place-cards {
+    .top-place-head {
+        @include flex(flex, space-between, center);
+    }
+}
+
+.top-places-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.3%;
+
+   .top-place-main-content {
+        width: 30%;
+        display: inline-block;
+        margin-bottom: 58px;
+    }
+
+    @include md{
+        .top-place-main-content {
+            width: 47%;
+        }
+    }
+
+    @include sm{
+        flex-direction: column;
+
+        .top-place-main-content {
+            width: 100%
+        }
+    }
+}
+
+.card-content-banner {
+    position: relative;
+
+    .card-content-banner-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .top-place-fig {
+        position: absolute;
+        bottom: 2px;
+        background: $color-eerieb-black;
+        width: 100%
+    }
+}
+
+.top-place-fig {
+    .detail{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:16px 25px;
+      }
+}
+
+.card-info-content {
+
+    .card-info-description {
+
+        margin: 45px 0 31px 0;
+    }
+
+    .card-info-btn {
+        display: inline-block;
+    }
+}

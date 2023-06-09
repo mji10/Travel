@@ -2,12 +2,18 @@
 ------ Common ------
 ================== */
 .container {
-    max-width: 1440px;
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 1320px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
+}
+
+.container-lg{
+max-width: 1140px;
+margin:0 auto;
+padding: 0 20px;
 }
 
 .ml-14{
@@ -20,6 +26,20 @@
 
 .mb-77 {
     margin-bottom: $mb-77;
+}
+
+.mbl-d-none{
+    @include sm{
+        display: none;
+    }
+}
+
+.mb-btn{
+    @include display(none);
+
+    @include sm{
+        @include display(block);
+    }
 }
 
 /* ==================
@@ -60,20 +80,57 @@
     }
 
     .hero-content {
-        position: absolute;
-        top: 40%;
-        left: 41%;
-        transform: translate(-50%, -50%);
+        // position: absolute;
+        // top: 40%;
+        // left: 41%;
+        // transform: translate(-50%, -50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        min-height: 100vh;
+        flex-direction: column;
+        padding-bottom: 80px;
+
+        @include sm{
+            padding-bottom:0;
+        }
 
         .hero-heading {
             margin-bottom: 22px;
-            width: 80%;
+            width: 66%;
+
+
+            @include lg{
+                width: 100%;
+                text-align: center;
+            }
+
+            @include sm{
+
+                font-size:$txt-lg;
+                // text-align: center;
+                // width:100%
+            }
         }
 
         .hero-description {
             padding-right: 73px;
             margin-bottom: 59px;
             width: 70%;
+
+            @include lg{
+                text-align: center;
+                padding: 0 73px;
+                width:100%
+            }
+
+            @include sm{
+
+                font-size:$txt-md;
+                padding: 0;
+                
+            }
         }
     }
 }
@@ -92,34 +149,29 @@
 
     .heading-md-info {
         margin-bottom: 120px;
+
+        @include sm{
+            margin-bottom:0;
+            text-align: center;
+            font-size:$heading-sm;
+            padding:20px 0;
+        }
+    }
+
+
+    @include md{
+        top:-162px
+    }
+
+
+    @include sm{
+       top: 0;
+       padding:0;
+       margin:10px 0;
     }
 }
 
-.floating-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3.3%;
 
-    .floating-main-content {
-        width: 30%;
-        display: inline-block;
-        margin-bottom: 58px;
-    }
-}
-
-.floating-main-content {
-    .floating-main-content-img {
-        margin-bottom: 37px;
-    }
-
-    .floating-main-content-heading {
-        margin-bottom: 26px;
-    }
-
-    .floating-main-content-description {
-        margin-bottom: 39px;
-    }
-}
 
 /* ==================
 ------ PLaces to visit ------
@@ -127,6 +179,11 @@
 
 .top-places {
     padding-bottom: 121px;
+
+    @include sm{
+        padding:0;
+        margin: 50px 0
+    }
 }
 
 .top-place-head {
@@ -145,6 +202,7 @@
 
     .top-place-card {
         position: relative;
+        overflow: hidden;
 
         .top-place-card-title {
             position: absolute;
@@ -162,10 +220,27 @@
             top: 0;
             width: 100%;
             height: 100%;
+            transition: .5s ease all;
 
         }
 
+        .top-place-card-image{
+            transition: .5s ease all;
+    
+        }
+
+        &:hover{
+            .top-place-card-image{
+            transform: scale(1.1);}
+        }
+
     }
+
+    @include sm{
+        flex-direction: column;
+    }
+
+    
 }
 
 
@@ -186,109 +261,60 @@
         flex-direction: column;
         text-align: start;
 
-        .place-info-content {
+        @include sm{
+            text-align: center;
+        }
+    }
 
-            margin-left: 31px;
+    .place-info-content {
+
+        margin-left: 31px;
 
 
-            p {
-                width: 80%;
-                margin: 45px 0 58px 0;
+        p {
+            width: 80%;
+            margin: 45px 0 58px 0;
+
+            @include sm{
+                margin:20px 0;
+                width: 100%;
             }
+        }
+
+        @include sm{
+            margin: 10px 0;
+
+            p{
+            margin:20px 0;
+            width: 100%;
+        }
         }
     }
 
     .place-info-main-image {
         width: 100%;
     }
-}
 
-/* ==================
------- place cards ------
-================== */
 
-.top-places-card-content {
-    margin-top: 64px
-}
+    @include sm{
+        display:block;
 
-.place-cards {
-    .top-place-head {
-        @include flex(flex, space-between, center);
+        .place-info-content-heading br{
+            display:none;
+        }
     }
 }
 
-.top-places-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3.3%;
 
-   .top-place-main-content {
-        width: 30%;
-        display: inline-block;
-        margin-bottom: 58px;
-    }
-}
-
-.card-content-banner {
-    position: relative;
-
-    .card-content-banner-img {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .top-place-fig {
-        position: absolute;
-        bottom: 2px;
-        background: $color-eerieb-black;
-        width: 100%
-    }
-}
-
-.top-place-fig {
-    .detail{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:16px 25px;
-      }
-}
-
-.card-info-content {
-
-    .card-info-description {
-
-        margin: 45px 0 31px 0;
-    }
-
-    .card-info-btn {
-        display: inline-block;
-    }
-}
 
 
 /* ==================
 ------ Video------
 ================== */
 
-.place-video {
-    position: relative;
 
-    &::after {
-        content: "";
-        background-color: $color-eerieb-black;
-        position: absolute;
-        left: 0px;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-
-    }
-
-    video {
+    iframe {
         object-fit: cover;
         display: block;
+        width: 100%;
     }
-}

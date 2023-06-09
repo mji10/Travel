@@ -8,7 +8,29 @@
 
     @include btn;
     padding: 12px 20px;
+
+    @include sm{
+        width:100%;
+        text-align:center;
+    }
 }
+
+.top-left {
+    &:before {
+      top: 0;
+      bottom: 0;
+      left: -120%;
+      transform: skewX(-45deg);
+      width: 100%;
+    }
+    &:hover {
+      &:before {
+        width: 240%;
+        border-color: $color-dark-black;
+      }
+    }
+  }
+
 
 // Animations
 .btn-animate{
@@ -45,5 +67,6 @@
     }
 
 }
+
 
 

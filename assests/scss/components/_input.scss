@@ -1,19 +1,185 @@
-.hero-form {
-    color: #fff;
-    @include flex(flex,null,center);
+
+.main-form {
+    display: flex;
+
+    @include md {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    @include sm {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
 }
 
-.form-main {
+.form {
+    display: block;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px $color-white;
+    margin-right: 30px;
 
+    @include sm {
+        display: block;
+        display: flex;
+        align-items: center;
+        border-bottom: solid 2px #ffffff;
+        /* margin-right: 30px; */
+        width: 80%;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+.form-text {
     padding: 22px 0;
     border-bottom: 1px solid #fff;
     margin-right: 30px;
-    width: 50%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: $color-white;
 
-    input[type="radio" i] {
-        appearance: radio;
-        accent-color: $color-blue;
-        margin-right: 23px;
-      
+    &:active {
+        border-bottom: none;
     }
+
+    &::placeholder {
+        color: $color-white;
+    }
+
+
+    @include sm {
+        padding: 22px 5px;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+input:focus {
+    color: $color-white;
+
+    &::placeholder {
+        color: transparent;
+    }
+}
+
+.form-wrapper {
+
+    position: relative;
+    margin-right: 30px;
+
+}
+
+.radio-button-container {
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    position: relative;
+    line-height: 25px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 1px solid $color-white;
+}
+
+.radio-button-container input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border: 2px solid $color-white;
+    transition: all 0.3s;
+    line-height: 21px;
+}
+
+.text:focus .input-field~.checkmark {
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.radio-button-container .text:focus~.checkmark {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: teal;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    line-height: 13px;
+}
+
+.radio-button-container input[type=text]:focus~.checkmark:after {
+    display: block;
+}
+
+.radio-button-container .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: $color-blue;
+    line-height: 13px;
+}
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.input-field .input-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    cursor: text;
+    margin-left: 32px;
+
+}
+
+.text-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    box-shadow: none;
+    color: #111;
+    background-color: transparent;
+    margin-left: 32px;
+
+}
+
+.text-input:focus~.input-head,
+.text-input:valid~.input-head {
+    font-size: 14px;
+    top: -24px;
+    color: $color-blue;
 }
