@@ -2,15 +2,27 @@
 // Imports
 
 @import 'base/_reset.scss';
+
 @import 'layout/_breakpoints.scss';
+
 @import 'sass-utlis/_variables.scss';
+
 @import 'sass-utlis/_mixins.scss';
+
 @import 'base/_colors.scss';
+
 @import 'base/fonts';
+
 @import 'base/typography.scss';
+
 @import 'components/_buttons.scss';
+
 @import 'layout/header';
+
 @import 'layout/_footer.scss';
+
 @import 'layout/_cards.scss';
+
 @import 'components/_input.scss';
+
 @import 'layout/common-layout';

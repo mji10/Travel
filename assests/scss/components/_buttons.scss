@@ -19,54 +19,55 @@
     &:before {
       top: 0;
       bottom: 0;
-      left: -120%;
+      left: -125%;
       transform: skewX(-45deg);
       width: 100%;
     }
     &:hover {
       &:before {
-        width: 240%;
+        width: 250%;
         border-color: $color-dark-black;
       }
     }
   }
 
 
-// Animations
-.btn-animate{
 
-    i{
-        margin-left:26px;
+// arrow animation
+.arrow {
+    color: $color-blue;
+    text-decoration: none;
+    text-align: center;
+
+    &::after {
+        display: inline-block;
+       margin-left: 26px;
+        content: "\0279E"; // arrow right unicode
+        -webkit-transition: transform 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
     }
 
-    &:hover{
-        i{
-            margin-left:30px
+    &:hover {
+        cursor: pointer;
+
+        &::after {
+            -webkit-transform: translateX(4px);
+            -moz-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            -o-transform: translateX(4px);
+            transform: translateX(4px);
         }
     }
 }
 
-// Overlay Button
-.overlay-play-button__play {
-    border-radius: 50%;
-    height: 112px;
-    width: 112px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index:2;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color: $color-white;
-
-
-    &:hover{
-        cursor: pointer;
-    }
-
+.mb-link{
+    display: none;
+@include sm{
+    display: block;
 }
-
+}
 
 

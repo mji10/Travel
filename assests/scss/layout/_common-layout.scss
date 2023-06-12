@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.container-lg{
+.container-md{
 max-width: 1140px;
 margin:0 auto;
 padding: 0 20px;
@@ -28,9 +28,13 @@ padding: 0 20px;
     margin-bottom: $mb-77;
 }
 
+img{
+    display: block;
+}
+
 .mbl-d-none{
     @include sm{
-        display: none;
+        @include display(none);
     }
 }
 
@@ -54,15 +58,6 @@ padding: 0 20px;
     position: relative;
     height: 100vh;
 
-    .hero-bg {
-        display: block;
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-    }
-
     .hero-bg{
         display: block;
         position: absolute;
@@ -80,14 +75,7 @@ padding: 0 20px;
     }
 
     .hero-content {
-        // position: absolute;
-        // top: 40%;
-        // left: 41%;
-        // transform: translate(-50%, -50%);
-
-        display: flex;
-        justify-content: center;
-        align-items: start;
+        @include flex(flex,center,start);
         min-height: 100vh;
         flex-direction: column;
         padding-bottom: 80px;
@@ -109,8 +97,6 @@ padding: 0 20px;
             @include sm{
 
                 font-size:$txt-lg;
-                // text-align: center;
-                // width:100%
             }
         }
 
@@ -143,8 +129,8 @@ padding: 0 20px;
 .floating-content {
     box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
     padding: 93px 63px 100px 100px;
-    top: -200px;
-    position: relative;
+    margin-top: -200px;
+    margin-bottom: 50px;
     background: #fff;
 
     .heading-md-info {
@@ -200,47 +186,47 @@ padding: 0 20px;
     gap: 10px;
     margin-bottom: 10px;
 
-    .top-place-card {
-        position: relative;
-        overflow: hidden;
-
-        .top-place-card-title {
-            position: absolute;
-            bottom: 29px;
-            left: 27px;
-            z-index: 2;
-        }
-
-
-        &::after {
-            content: "";
-            background-color: $color-eerieb-black;
-            position: absolute;
-            left: 0px;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            transition: .5s ease all;
-
-        }
-
-        .top-place-card-image{
-            transition: .5s ease all;
-    
-        }
-
-        &:hover{
-            .top-place-card-image{
-            transform: scale(1.1);}
-        }
-
-    }
-
     @include sm{
         flex-direction: column;
     }
 
     
+}
+
+.top-place-card {
+    position: relative;
+    overflow: hidden;
+
+    .top-place-card-title {
+        position: absolute;
+        bottom: 29px;
+        left: 27px;
+        z-index: 2;
+    }
+
+
+    &::after {
+        content: "";
+        background-color: $color-eerieb-black;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease all;
+
+    }
+
+    .top-place-card-image{
+        transition: .5s ease all;
+
+    }
+
+    &:hover{
+        .top-place-card-image{
+        transform: scale(1.1);}
+    }
+
 }
 
 
@@ -271,7 +257,7 @@ padding: 0 20px;
         margin-left: 31px;
 
 
-        p {
+        .place-info-content-description {
             width: 80%;
             margin: 45px 0 58px 0;
 
@@ -284,7 +270,7 @@ padding: 0 20px;
         @include sm{
             margin: 10px 0;
 
-            p{
+            .place-info-content-description{
             margin:20px 0;
             width: 100%;
         }

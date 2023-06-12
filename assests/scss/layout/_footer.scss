@@ -32,7 +32,7 @@ footer {
     flex-wrap: wrap;
 
     @include sm{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
@@ -43,6 +43,7 @@ footer {
 
     @include sm{
         @include flex(flex,space-between,start);
+        width: 100%;
     }
 }
 

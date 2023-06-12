@@ -12,15 +12,11 @@
 
 <body>
     <header class="header">
-        <div class="container container-lg">
+        <div class="container container-md">
             <nav class="navbar">
                 <a href="javascript:void(0)"><img src="assests/img/odigo-logo.png" alt=""></a>
 
-                <button type="button" class="navbar--toggler">
-                    <div class="line line__1"></div>
-                    <div class="line line__2"></div>
-                    <div class="line line__3"></div>
-                </button>
+                <div class="burger_menu" onclick="openMenu()"><span></span></div>
                 <div class="navbar-show">
                     <ul class="main-nav">
                         <li class="main-nav-links"><a href="javascript:void(0)"
@@ -40,7 +36,7 @@
     <main>
         <section class="hero">
             <div class="hero-main">
-                <div class="container container-lg">
+                <div class="container container-md">
                     <div class="hero-content">
                         <h1 class="heading-lg hero-heading">Discover Amazing places in Japan</h1>
                         <p class="txt-sm-white hero-description">Jump off balcony, onto stranger's head. Chase ball of
@@ -51,57 +47,11 @@
                             attack
                             the child, open the door,</p>
 
-                        <!-- <form action="javascript:void(0)" class="main-form">
-                            <label class="form"><span class="form-icon"></span> <input type="text"
-                                    placeholder="What would you like to do?" class="text-md form-text"></label>
-
-                            <label class="form"><span class="form-icon"></span> <input type="text"
-                                    placeholder="Where would you like to go?" class="text-md  form-text"></label>
-
-                            <input type="Submit" value="SEARCH" class="search-btn txt-lg top-left">
-
-                        </form> -->
-
-
-
-                        <!-- <form action="javascript:void(0)" class="main-form">
-                            <label class="form"><span class="form-icon"></span>
-                                <div class="input-field">
-                                    <input type="text" id="name" required class="text-input" />
-                                    <label for="name" class="input-head txt-md-white">What would you like to do?</label>
-                                </div>
-                            </label>
-
-                            <label class="form"><span class="form-icon"></span>
-                                <div class="input-field">
-                                    <input type="text" id="class" required class="text-input" />
-                                    <label for="class" class="input-head txt-md-white">Where would you like to
-                                        go?</label>
-                                </div>
-                            </label>
-
-                            <input type="Submit" value="SEARCH" class="search-btn txt-lg top-left">
-
-                            <div class="container">
-                                <label class="radio-button-container" disabled>
-                                  <input type="radio" checked="checked" name="radio">
-                                  <div class="input-field">
-                                  <input type="text" id="name2" required class="text-input" />
-                                  <label for="name2" class="input-head txt-md-white">What would you like to do?</label>
-                                   <span class="checkmark"></span>
-                                </div>
-                                </label>
-                              
-                              </div>
-
-                        </form> -->
-
-
                         <form action="javascript:void(0)" class="main-form">
 
                             <div class="form-wrapper">
-                                <label class="radio-button-container" disabled>
-                                    <input type="radio" checked="checked" name="radio">
+                                <label class="radio-button-container" for="radio">
+                                    <input type="radio" checked="checked" id="radio">
                                     <div class="input-field">
                                         <input type="text" id="name1" required class="text-input" />
                                         <label for="name1" class="input-head txt-md-white">What would you like to
@@ -113,8 +63,8 @@
                             </div>
 
                             <div class="form-wrapper">
-                                <label class="radio-button-container" disabled>
-                                    <input type="radio" checked="checked" name="radio">
+                                <label class="radio-button-container" for="radio">
+                                    <input type="radio" checked="checked" id="radio">
                                     <div class="input-field">
                                         <input type="text" id="name2" required class="text-input" />
                                         <label for="name2" class="input-head txt-md-white">Where would you like to
@@ -125,7 +75,7 @@
 
                             </div>
 
-                            <input type="Submit" value="SEARCH" class="search-btn txt-lg top-left">
+                            <button value="submit" class="search-btn top-left txt-lg">SEARCH</button>
 
                         </form>
 
@@ -149,40 +99,39 @@
                     <div>
                         <ul class="floating-main">
                             <li class="floating-main-content">
-                                <img src="assests/img/home.png" alt="Home" class="floating-main-content-img">
+                                <img src="assests/img/home.png" alt="Home" class="floating-main-content-img" width="63"
+                                    height="63">
                                 <h3 class="text-md-black floating-main-content-heading">Welcome to Odigo!</h3>
                                 <p class="txt-sm-black floating-main-content-description">Jump off balcony, onto
                                     stranger's
                                     head. Chase ball of string
                                     hide when guests come
                                     over.</p>
-                                <a href="javascript:void(0)" class="primary-link btn-animate">LEARN MORE<i
-                                        class="fa-solid fa-arrow-right fa-sm ml-26"></i></a>
+                                <a class="button arrow primary-link" href="#">LEARN MORE</a>
                             </li>
 
                             <li class="floating-main-content">
-                                <img src="assests/img/person.png" alt="person" class="floating-main-content-img">
+                                <img src="assests/img/person.png" alt="person" class="floating-main-content-img"
+                                    width="63" height="63">
                                 <h3 class="text-md-black floating-main-content-heading">Your Personal Japan Guide</h3>
                                 <p class="txt-sm-black floating-main-content-description">Jump off balcony, onto
                                     stranger's
                                     head. Chase ball of string
                                     hide when guests come
                                     over.</p>
-                                <a href="javascript:void(0)" class="primary-link btn-animate">LEARN MORE<i
-                                        class="fa-solid fa-arrow-right fa-sm ml-26"></i></a>
+                                <a class="button arrow primary-link" href="#">LEARN MORE</a>
                             </li>
 
                             <li class="floating-main-content">
                                 <img src="assests/img/store.png" alt="stores" class="floating-main-content-img"
-                                    width="66" height="66">
+                                    width="63" height="63">
                                 <h3 class="text-md-black floating-main-content-heading">Promoting Local Businesses</h3>
                                 <p class="txt-sm-black floating-main-content-description">Jump off balcony, onto
                                     stranger's
                                     head. Chase ball of string
                                     hide when guests come
                                     over.</p>
-                                <a href="javascript:void(0)" class="primary-link btn-animate">LEARN MORE<i
-                                        class="fa-solid fa-arrow-right fa-sm ml-26"></i></a>
+                                <a class="button arrow primary-link" href="#">LEARN MORE</a>
                             </li>
                         </ul>
                     </div>
@@ -195,23 +144,25 @@
 
                 <div class="top-place-head">
                     <h2 class="heading-md">Get inspired for your next trip</h2>
-                    <a href="javascript:void(0)" class="primary-link btn-animate mbl-d-none">VIEW ALL<i
-                            class="fa-solid fa-arrow-right fa-sm ml-26"></i></a>
+                    <a class="button arrow primary-link mbl-d-none" href="#">VIEW ALL</a>
+
                 </div>
 
                 <div class="top-place-main">
                     <div class="top-place-img">
                         <a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/mount-fuji@3x.jpg" alt="Mount FUJI" style="width:100%"
-                                    class="top-place-card-image">
+                                <img src="assests/img/mount-fuji.jpg"
+                                    srcset="assests/img/mount-fuji@2x.jpg 1x , assests/img/mount-fuji@3x.jpg 2x"
+                                    alt="Mount FUJI" style="width:100%" class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Mount Fuji</figcaption>
                             </figure>
                         </a>
                         <a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/kyoto@3x.jpg" alt="Kyoto" style="width:100%"
-                                    class="top-place-card-image">
+                                <img src="assests/img/kyoto.jpg"
+                                    srcset="assests/img/kyoto@2x.jpg 1x, assests/img/kyoto@3x.jpg 2x" alt="Kyoto"
+                                    style="width:100%" class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Kyoto</figcaption>
                             </figure>
                         </a>
@@ -219,26 +170,31 @@
                     <div class="top-place-img">
                         <a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/tokyo@3x.jpg" alt="Tokyo" style="width:100%"
-                                    class="top-place-card-image">
+                                <img src="assests/img/tokyo@3x.jpg"
+                                    srcset="assests/img/tokyo@2x.jpg 1x, assests/img/tokyo@3x.jpg 2x" alt="Tokyo"
+                                    style="width:100%" class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Tokyo</figcaption>
                             </figure>
                         </a><a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/niigata@3x.jpg" alt="Trulli" style="width:100%"
-                                    class="top-place-card-image">
+                                <img src="assests/img/niigata.jpg"
+                                    srcset="assests/img/niigata@2x.jpg 1x, assests/img/niigata@3x.jpg 2x" alt="Trulli"
+                                    style="width:100%" class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Niigata</figcaption>
                             </figure>
                         </a><a href="javascript:void(0)">
                             <figure class="top-place-card">
-                                <img src="assests/img/sapporo@3x.jpg" alt="Trulli" style="width:100%"
-                                    class="top-place-card-image">
+                                <img src="assests/img/sapporo.jpg"
+                                    srcset="assests/img/sapporo@2x.jpg 1x, assests/img/sapporo@3x.jpg 2x" alt="Trulli"
+                                    style="width:100%" class="top-place-card-image">
                                 <figcaption class="heading-lg top-place-card-title">Sapporo</figcaption>
                             </figure>
                         </a>
                     </div>
 
-                    <a href="" class="seemore-btn mb-btn">view all</a>
+                    <div>
+                        <a class="button arrow primary-link mb-link" href="#">VIEW ALL</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -248,7 +204,9 @@
                 <div class="place-info-main mb-77">
                     <div class="place-info-main-image">
                         <picture>
-                            <img src="assests/img/place-with-roof@2x.jpg" alt="" width="100%" height="100%">
+                            <img src="assests/img/place-with-roof.jpg"
+                                srcset="assests/img/place-with-roof@2x.jpg 1x, assests/img/place-with-roof@3x.jpg 2x"
+                                alt="Roof image" width="100%" height="100%">
                         </picture>
                     </div>
                     <div class="place-info-main-content">
@@ -261,8 +219,8 @@
                                 Being gorgeous with belly side up i could pee on this if i had the energy but under the
                                 bed,
                                 for attack the child, open the door,</p>
-                            <a href="javascript:void(0)" class="primary-link btn-animate">VIEW PREFECTURE<i
-                                    class="fa-solid fa-arrow-right fa-sm ml-26 mb"></i></a>
+
+                            <a class="button arrow primary-link" href="#">VIEW PREFECTURE</a>
                         </div>
                     </div>
                 </div>
@@ -278,13 +236,14 @@
                                 Being gorgeous with belly side up i could pee on this if i had the energy but under the
                                 bed,
                                 for attack the child, open the door,</p>
-                            <a href="javascript:void(0)" class="primary-link btn-animate">VIEW NEIGHBORHOOD<i
-                                    class="fa-solid fa-arrow-right fa-sm"></i></a>
+                            <a class="button arrow primary-link" href="#">VIEW NEIGHBORHOOD</a>
                         </div>
                     </div>
                     <div class="place-info-main-image">
                         <picture>
-                            <img src="assests/img/passage@2x.jpg" alt="" width="100%" height="100%">
+                            <img src="assests/img/passage.jpg"
+                                srcset="assests/img/passage@2x.jpg 1x, assests/img/passage@3x.jpg 2x"
+                                alt="Passage image" width="100%" height="100%">
                         </picture>
                     </div>
                 </div>
@@ -303,7 +262,9 @@
                         <li class="top-place-main-content">
                             <div class="card-content">
                                 <figure class="card-content-banner">
-                                    <img src="assests/img/nagoya@3x.jpg" alt="" class="card-content-banner-img">
+                                    <img src="assests/img/nagoya.jpg"
+                                        src="assests/img/nagoya@2x.jpg 1x, assests/img/nagoya@3x.jpg 2x" alt="NAGOYA"
+                                        class="card-content-banner-img">
                                     <figcaption class="top-place-fig">
                                         <div class="detail">
                                             <p class="txt-md-white">NAGOYA</p>
@@ -334,7 +295,9 @@
                         <li class="top-place-main-content">
                             <div class="card-content">
                                 <figure class="card-content-banner">
-                                    <img src="assests/img/nigata@3x.jpg" alt="" class="card-content-banner-img">
+                                    <img src="assests/img/nigata.jpg"
+                                        srcset="assests/img/nigata@2x.jpg 1x, assests/img/nigata@3x.jpg 2x"
+                                        alt="NIIGATA" class="card-content-banner-img">
                                     <figcaption class="top-place-fig">
                                         <div class="detail">
                                             <p class="txt-md-white">NIIGATA</p>
@@ -365,7 +328,9 @@
                         <li class="top-place-main-content">
                             <div class="card-content">
                                 <figure class="card-content-banner">
-                                    <img src="assests/img/osaka@3x.jpg" alt="" class="card-content-banner-img">
+                                    <img src="assests/img/osaka.jpg"
+                                        srcset="assests/img/osaka@2x.jpg 1x, assests/img/osaka@3x.jpg 2x" alt="OSAKA"
+                                        class="card-content-banner-img">
                                     <figcaption class="top-place-fig">
                                         <div class="detail">
                                             <p class="txt-md-white">OSAKA</p>
@@ -396,7 +361,9 @@
                         <li class="top-place-main-content">
                             <div class="card-content">
                                 <figure class="card-content-banner">
-                                    <img src="assests/img/saitama@3x.jpg" alt="" class="card-content-banner-img">
+                                    <img src="assests/img/saitama.jpg"
+                                        srcset="assests/img/saitama@2x.jpg 1x, assests/img/saitama@3x.jpg 2x"
+                                        alt="SAITAMA" class="card-content-banner-img">
                                     <figcaption class="top-place-fig">
                                         <div class="detail">
                                             <p class="txt-md-white">SAITAMA</p>
@@ -427,7 +394,9 @@
                         <li class="top-place-main-content">
                             <div class="card-content">
                                 <figure class="card-content-banner">
-                                    <img src="assests/img/ueno@3x.jpg" alt="" class="card-content-banner-img">
+                                    <img src="assests/img/ueno.jpg"
+                                        srcset="assests/img/ueno@2x.jpg 1x, assests/img/ueno@3x.jpg 2x" alt="UENO"
+                                        class="card-content-banner-img">
                                     <figcaption class="top-place-fig">
                                         <div class="detail">
                                             <p class="txt-md-white">UENO</p>
@@ -458,7 +427,9 @@
                         <li class="top-place-main-content">
                             <div class="card-content">
                                 <figure class="card-content-banner">
-                                    <img src="assests/img/shibuya@3x.jpg" alt="" class="card-content-banner-img">
+                                    <img src="assests/img/shibuya.jpg"
+                                        srcset="assests/img/shibuya@2x.jpg 1x, assests/img/shibuya@3x.jpg 2x"
+                                        alt="SHIBUYA" class="card-content-banner-img">
                                     <figcaption class="top-place-fig">
                                         <div class="detail">
                                             <p class="txt-md-white">SHIBUYA</p>
@@ -496,7 +467,7 @@
                 <div class="overlay-play-button__play"><span class="play_pause"><i
                             class="fa-solid fa-play fa-2xl"></i></span> -->
 
-                <iframe height="315" src="https://www.youtube.com/embed/OHAWwaYu2H0" title="YouTube video player"
+                <iframe height="609" src="https://www.youtube.com/embed/OHAWwaYu2H0" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -507,7 +478,7 @@
 
 
     <footer>
-        <div class="container container-lg">
+        <div class="container container-md">
             <section class="ft-main font">
                 <div class=" ft-main-logo">
                     <a href="javascript:void(0)"><img src="assests/img/odigo-logo@3x.png" alt="" width="200px"></a>

@@ -4,70 +4,22 @@
 
     @include md {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex (null,center,center);
         width: 100%;
     }
 
     @include sm {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex (null,center,center);
         width: 100%;
         margin-top: 10px;
     }
 
 }
 
-.form {
-    display: block;
-    display: flex;
-    align-items: center;
-    border-bottom: solid 2px $color-white;
-    margin-right: 30px;
-
-    @include sm {
-        display: block;
-        display: flex;
-        align-items: center;
-        border-bottom: solid 2px #ffffff;
-        /* margin-right: 30px; */
-        width: 80%;
-        /* justify-content: center; */
-        align-items: center;
-        padding: 0 10px;
-        margin-bottom: 10px;
-    }
-
-}
-
-.form-text {
-    padding: 22px 0;
-    border-bottom: 1px solid #fff;
-    margin-right: 30px;
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    color: $color-white;
-
-    &:active {
-        border-bottom: none;
-    }
-
-    &::placeholder {
-        color: $color-white;
-    }
-
-
-    @include sm {
-        padding: 22px 5px;
-        margin-right: 0;
-        width: 100%;
-    }
-}
-
 input:focus {
     color: $color-white;
+    outline: none;
 
     &::placeholder {
         color: transparent;
@@ -87,7 +39,6 @@ input:focus {
     position: relative;
     line-height: 25px;
     margin-bottom: 12px;
-    margin-left: 30px;
     cursor: pointer;
     font-size: 18px;
     -webkit-user-select: none;
@@ -171,7 +122,7 @@ input:focus {
     outline: 0;
     padding: 15px;
     box-shadow: none;
-    color: #111;
+    color:$color-white;
     background-color: transparent;
     margin-left: 32px;
 
@@ -181,5 +132,17 @@ input:focus {
 .text-input:valid~.input-head {
     font-size: 14px;
     top: -24px;
-    color: $color-blue;
+    color: $color-white;
+}
+
+input[type="submit"] {
+    border:none;
+    background-color: $color-blue;
+    color: $color-white;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: capitalize;
 }
