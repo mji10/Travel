@@ -1,15 +1,17 @@
 .search-btn{
-    @include btn;
+    @extend %btn;
     padding:14px 40px;
     cursor:pointer;
 }
 
 .seemore-btn{
 
-    @include btn;
+   @extend %btn;
     padding: 12px 20px;
+    font-size: $txt-sm;
+    font-family: $font-family;
 
-    @include sm{
+    @include viewport-sm{
         width:100%;
         text-align:center;
     }
@@ -40,13 +42,9 @@
     text-align: center;
 
     &::after {
-        display: inline-block;
+        @include display(inline-block);
        margin-left: 26px;
         content: "\0279E"; // arrow right unicode
-        -webkit-transition: transform 0.3s ease-out;
-        -moz-transition: transform 0.3s ease-out;
-        -ms-transition: transform 0.3s ease-out;
-        -o-transition: transform 0.3s ease-out;
         transition: transform 0.3s ease-out;
     }
 
@@ -54,19 +52,15 @@
         cursor: pointer;
 
         &::after {
-            -webkit-transform: translateX(4px);
-            -moz-transform: translateX(4px);
-            -ms-transform: translateX(4px);
-            -o-transform: translateX(4px);
             transform: translateX(4px);
         }
     }
 }
 
 .mb-link{
-    display: none;
-@include sm{
-    display: block;
+   @include display(none);
+@include viewport-sm{
+    @include display(block);
 }
 }
 

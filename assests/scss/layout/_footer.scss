@@ -1,29 +1,21 @@
-footer {
+.footer {
     background-color: $color-dark-black;
     color: #bbb;
     line-height: 1.5 !important;
     padding: 50px 0 !important;
 
-    .ft-list {
-        list-style: none;
-        padding-left: 0;
+    .ft {
+        &-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        &-title {
+            padding-bottom: 10px;
+        }
     }
 }
 
-
-.ft-title {
-    padding-bottom: 10px;
-}
-
-.ft-main-logo {
-    width: 40%;
-    display: flex;
-
-    @include sm{
-        width: 100%;
-        @include flex(flex,center,center)
-    }
-}
 
 /* Footer main */
 .ft-main {
@@ -31,22 +23,32 @@ footer {
     display: flex;
     flex-wrap: wrap;
 
-    @include sm{
+    @include viewport-sm {
         flex-direction: column;
     }
-}
 
-.ft-main-content {
-    width: 60%;
+    &-logo {
+        width: 40%;
+        @include flex(flex, null, null);
 
-    @include flex(flex,space-between,null);
-
-    @include sm{
-        @include flex(flex,space-between,start);
-        width: 100%;
+        @include viewport-sm {
+            width: 100%;
+            @include flex(flex, center, center)
+        }
     }
-}
 
-.ft-main-item {
-    padding: 20px;
+    &-content {
+        width: 60%;
+
+        @include flex(flex, space-between, null);
+
+        @include viewport-sm {
+            @include flex(flex, space-between, start);
+            width: 100%;
+        }
+    }
+
+    &-item {
+        padding: 20px;
+    }
 }

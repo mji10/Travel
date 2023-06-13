@@ -27,4 +27,13 @@ $txt-lg:24px;
 $txt-md:18px;
 $txt-sm:16px;
 
-$mb-77:77px
+$mb-77:77px;
+
+// Media Queries
+$breakpoint:(
+    "viewport-xs":0,
+    "viewport-sm":480px,
+    "viewport-md":760px,
+    "viewport-lg":960px,
+    "viewport-xl":963px
+);

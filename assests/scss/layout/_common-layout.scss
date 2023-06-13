@@ -10,14 +10,16 @@
     height: 100%;
 }
 
-.container-md{
-max-width: 1140px;
-margin:0 auto;
-padding: 0 20px;
+.container-md {
+    max-width: 1140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.ml-14{
-    margin-left:14px
+.ml-14 {
+    margin-left: 14px
 }
 
 .ml-26 {
@@ -28,20 +30,20 @@ padding: 0 20px;
     margin-bottom: $mb-77;
 }
 
-img{
+img {
     display: block;
 }
 
-.mbl-d-none{
-    @include sm{
+.mbl-d-none {
+    @include viewport-sm {
         @include display(none);
     }
 }
 
-.mb-btn{
+.mb-btn {
     @include display(none);
 
-    @include sm{
+    @include viewport-sm {
         @include display(block);
     }
 }
@@ -50,77 +52,77 @@ img{
 ------ Hero ------
 ================== */
 
-.hero-main {
-    height: 100%;
-}
-
 .hero {
     position: relative;
     height: 100vh;
 
-    .hero-bg{
-        display: block;
+    &-main {
+        height: 100%;
+    }
+
+    &-bg {
+        @include display(block);
         position: absolute;
         top: 0;
         z-index: -1;
         width: 100%;
         height: 100%;
 
-        .hero-bg-img {
+        &-img {
             width: 100%;
             height: 100%;
-            -o-object-fit: cover;
             object-fit: cover;
         }
     }
 
-    .hero-content {
-        @include flex(flex,center,start);
+    &-content{
+        @include flex(flex, center, start);
         min-height: 100vh;
         flex-direction: column;
         padding-bottom: 80px;
 
-        @include sm{
-            padding-bottom:0;
+        @include viewport-sm {
+            padding-bottom: 0;
         }
 
-        .hero-heading {
+        &-heading {
             margin-bottom: 22px;
             width: 66%;
 
 
-            @include lg{
+           @include viewport-lg {
                 width: 100%;
                 text-align: center;
             }
 
-            @include sm{
+            @include viewport-sm {
 
-                font-size:$txt-lg;
+                font-size: $txt-lg;
             }
         }
 
-        .hero-description {
+        &-description {
             padding-right: 73px;
             margin-bottom: 59px;
             width: 70%;
 
-            @include lg{
+           @include viewport-lg {
                 text-align: center;
                 padding: 0 73px;
-                width:100%
+                width: 100%
             }
 
-            @include sm{
+            @include viewport-sm {
 
-                font-size:$txt-md;
+                font-size: $txt-md;
                 padding: 0;
-                
+
             }
         }
     }
-}
 
+
+}
 
 /* ==================
 ------ Floating Info ------
@@ -136,24 +138,24 @@ img{
     .heading-md-info {
         margin-bottom: 120px;
 
-        @include sm{
-            margin-bottom:0;
+        @include viewport-sm {
+            margin-bottom: 0;
             text-align: center;
-            font-size:$heading-sm;
-            padding:20px 0;
+            font-size: $heading-sm;
+            padding: 20px 0;
         }
     }
 
 
-    @include md{
-        top:-162px
+    @include viewport-md {
+        top: -162px
     }
 
 
-    @include sm{
-       top: 0;
-       padding:0;
-       margin:10px 0;
+    @include viewport-sm {
+        top: 0;
+        padding: 0;
+        margin: 10px 0;
     }
 }
 
@@ -164,40 +166,38 @@ img{
 ================== */
 
 .top-places {
-    padding-bottom: 121px;
+    margin-bottom: 121px;
 
-    @include sm{
-        padding:0;
+    @include viewport-sm {
+        padding: 0;
         margin: 50px 0
     }
-}
 
-.top-place-head {
-    @include flex(flex, space-between, center);
-}
-
-.top-place-main {
-    margin-top: 36px
-}
-
-.top-place-img {
-    @include flex(flex, space-between, null);
-    width: 100%;
-    gap: 10px;
-    margin-bottom: 10px;
-
-    @include sm{
-        flex-direction: column;
+    &-head{
+        @include flex(flex, space-between, center);
     }
 
-    
+    &-main{
+        margin-top: 36px
+    }
+
+    &-img{
+        @include flex(flex, space-between, null);
+    width: 100%;
+    column-gap: 10px;
+
+    @include viewport-sm {
+        flex-direction: column;
+    }
+    }
 }
+
 
 .top-place-card {
     position: relative;
     overflow: hidden;
 
-    .top-place-card-title {
+    &-title {
         position: absolute;
         bottom: 29px;
         left: 27px;
@@ -217,14 +217,15 @@ img{
 
     }
 
-    .top-place-card-image{
+    &-image {
         transition: .5s ease all;
 
     }
 
-    &:hover{
-        .top-place-card-image{
-        transform: scale(1.1);}
+    &:hover {
+        .top-place-card-image {
+            transform: scale(1.1);
+        }
     }
 
 }
@@ -239,15 +240,15 @@ img{
 }
 
 .place-info-main {
-    display: flex;
+    @include flex(flex,null,null);
 
-    .place-info-main-content {
+    &-content {
 
         @include flex(flex, center, start);
         flex-direction: column;
         text-align: start;
 
-        @include sm{
+        @include viewport-sm {
             text-align: center;
         }
     }
@@ -257,36 +258,36 @@ img{
         margin-left: 31px;
 
 
-        .place-info-content-description {
+        &-description {
             width: 80%;
             margin: 45px 0 58px 0;
 
-            @include sm{
-                margin:20px 0;
+            @include viewport-sm {
+                margin: 20px 0;
                 width: 100%;
             }
         }
 
-        @include sm{
+        @include viewport-sm {
             margin: 10px 0;
 
-            .place-info-content-description{
-            margin:20px 0;
-            width: 100%;
-        }
+            .place-info-content-description {
+                margin: 20px 0;
+                width: 100%;
+            }
         }
     }
 
-    .place-info-main-image {
+    &-image {
         width: 100%;
     }
 
 
-    @include sm{
-        display:block;
+    @include viewport-sm {
+        @include display(block);
 
-        .place-info-content-heading br{
-            display:none;
+        .place-info-content-heading br {
+            @include display(none);
         }
     }
 }
@@ -299,8 +300,8 @@ img{
 ================== */
 
 
-    iframe {
-        object-fit: cover;
-        display: block;
-        width: 100%;
-    }
+iframe {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+}

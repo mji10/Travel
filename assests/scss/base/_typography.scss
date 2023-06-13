@@ -1,108 +1,109 @@
 
-.heading-lg{
-    font-size:$heading-lg;
-    color:$color-white;
-    font-family: $font-family;
-    line-height: normal;
 
-    @include lg{
+.heading{
+
+    font-family: $font-family;
+
+    &-lg{
+        @include font($font-family,$heading-lg,$color-white,normal);
+        font-family: $font-family;
+
+       @include viewport-lg{
+            font-size:$heading-md;
+        }
+    
+        @include viewport-sm{
+            font-size:$heading-md;
+        }
+    }
+
+   @include viewport-lg{
         font-size:$heading-md;
     }
 
-    @include sm{
+    @include viewport-sm{
         font-size:$heading-md;
     }
-}
 
-.heading-md{
-    font-size:$heading-md;
-    color:$color-yankees-blue;
-    font-family: $font-family;
+    &-md{
+        @include font($font-family,$heading-md,$color-yankees-blue,null);
 
-    &::after{
-        content: "";
-        width:52%;
-        display: block;
-        border-bottom: 2px solid #1b7dff;
-        margin-top: 8px;
+        &::after{
+            content: "";
+            width:52%;
+            @include display(inline-block);
+            border-bottom: 2px solid #1b7dff;
+            margin-top: 8px;
+    
+        }
+    
+        @include viewport-sm{
+            font-size:$txt-lg;
+        }
 
+        &-info{
+            @include font($font-family,$heading-md,$color-yankees-blue,null);
+        }
     }
 
-    @include sm{
-        font-size:$txt-lg;
-    }
-}
+    &-sm{
+        @include font($font-family,$heading-sm,$color-yankees-blue,null);
+        font-weight: 600;
 
-.heading-md-info{
-    font-size:$heading-md;
-    color:$color-yankees-blue;
-    font-family: $font-family;
-}
-
-.heading-sm{
-    font-size:$heading-sm;
-    color:$color-yankees-blue;
-    font-family: $font-family;
-    font-weight: 600;
-
-    @include sm{
-        font-size:$txt-lg;
+        @include viewport-sm{
+            font-size:$txt-lg;
+        }
     }
 }
 
-.txt-lg{
-    font-size:$txt-lg;
-    color: $color-white;
+.txt{
     font-family: $font-family;
+
+    &-lg{
+        @include font($font-family,$txt-lg,$color-white,null);
+    }
+
+    &-md-black{
+        @include font($font-family,$txt-md,$color-black,null);
+    }
+
+    &-md-white{
+        @include font($font-family,$txt-md,$color-white,null);
+    }
+
+    &-sm-black{
+        @include font($font-family,$txt-sm,$color-black,24px);
+    }
+
+    &-sm-white{
+        @include font($font-family,$txt-sm,$color-white,24px);
+        text-decoration: none;
+    }
+
 }
 
-.text-md-black{
-    font-size:$txt-md;
-    color:$color-black;
-    font-family: $font-family;
-}
-
-.txt-md-white{
-    font-size:$txt-md;
-    color:$color-white;
-    font-family: $font-family;
-}
-
-.txt-sm-black{
-    font-size:$txt-sm;
-    color:$color-black;
-    font-family: $font-family;
-    line-height: 24px;
-}
-
-.txt-sm-white{
-    font-size:$txt-sm;
-    color:$color-white;
-    font-family: $font-family;
-    line-height: 24px;
-    text-decoration: none;
-}
 
 .primary-link{
-    font-size:$txt-sm;
-    color:$color-blue;
-    font-family: $font-family;
+    @include font($font-family,$txt-sm,$color-blue,null);
     text-decoration: none;
-
     &:hover{
         color:$color-dark-black;
     }
 }
 
 .navbar-link{
-    font-size:$txt-md;
-    color:$color-white;
+    @include font($font-family,$txt-md,$color-white,null);
     font-family: $font-family;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-dark-black;
+        transition: 0.5s
+    }
 }
 
 .description-link{
-    font-size:$txt-sm;
-    color:$color-white;
+    @include font($font-family,$txt-sm,$color-white,null);
     font-family: $font-family;
     text-decoration: none;
 }

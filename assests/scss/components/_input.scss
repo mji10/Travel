@@ -1,14 +1,14 @@
 
 .main-form {
-    display: flex;
+    @include display(flex);
 
-    @include md {
+    @include viewport-md {
         flex-direction: column;
         @include flex (null,center,center);
         width: 100%;
     }
 
-    @include sm {
+    @include viewport-sm {
         flex-direction: column;
         @include flex (null,center,center);
         width: 100%;
@@ -46,11 +46,11 @@ input:focus {
     -ms-user-select: none;
     user-select: none;
     border-bottom: 1px solid $color-white;
-}
 
-.radio-button-container input[type=radio] {
-    position: absolute;
-    opacity: 0;
+    input[type=radio] {
+        position: absolute;
+        opacity: 0;
+    }
 }
 
 .checkmark {
@@ -64,6 +64,13 @@ input:focus {
     border: 2px solid $color-white;
     transition: all 0.3s;
     line-height: 21px;
+
+    &::after{
+        content: "";
+    position: absolute;
+    @include display(none);
+    line-height: 13px
+    }
 }
 
 .text:focus .input-field~.checkmark {
@@ -76,15 +83,8 @@ input:focus {
 }
 
 
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    line-height: 13px;
-}
-
 .radio-button-container input[type=text]:focus~.checkmark:after {
-    display: block;
+    @include display(block);
 }
 
 .radio-button-container .checkmark:after {
@@ -93,7 +93,7 @@ input:focus {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: $color-blue;
+    background: $color-white;
     line-height: 13px;
 }
 
@@ -102,10 +102,9 @@ input:focus {
     width: 250px;
     height: 44px;
     line-height: 44px;
-}
 
-.input-field .input-head {
-    position: absolute;
+    .input-head{
+        position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -113,7 +112,7 @@ input:focus {
     transition: 0.2s all;
     cursor: text;
     margin-left: 32px;
-
+    }
 }
 
 .text-input {
@@ -143,6 +142,6 @@ input[type="submit"] {
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
-    display: inline-block;
+    @include display(inline-block);
     text-transform: capitalize;
 }
