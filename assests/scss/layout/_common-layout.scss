@@ -7,7 +7,6 @@
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
 }
 
 .container-md {
@@ -36,16 +35,20 @@ img {
 
 .mbl-d-none {
     @include viewport-sm {
-        @include display(none);
+        display: none;
     }
 }
 
 .mb-btn {
-    @include display(none);
+    display: none;
 
     @include viewport-sm {
-        @include display(block);
+        display: block;
     }
+}
+
+.no_scroll{
+    overflow: hidden;
 }
 
 /* ==================
@@ -53,24 +56,21 @@ img {
 ================== */
 
 .hero {
-    position: relative;
-    height: 100vh;
+    @include position(relative);
+    @include size(null,100vh);
 
     &-main {
-        height: 100%;
+        @include size(null,100%);
     }
 
     &-bg {
-        @include display(block);
-        position: absolute;
-        top: 0;
+        display: block;
+        @include position(absolute,0);
         z-index: -1;
-        width: 100%;
-        height: 100%;
+        @include size(100%,100%);
 
         &-img {
-            width: 100%;
-            height: 100%;
+            @include size(100%,100%);
             object-fit: cover;
         }
     }
@@ -87,11 +87,11 @@ img {
 
         &-heading {
             margin-bottom: 22px;
-            width: 66%;
+            @include size(66%);
 
 
            @include viewport-lg {
-                width: 100%;
+            @include size(100%);
                 text-align: center;
             }
 
@@ -104,12 +104,12 @@ img {
         &-description {
             padding-right: 73px;
             margin-bottom: 59px;
-            width: 70%;
+            @include size(70%);
 
            @include viewport-lg {
                 text-align: center;
                 padding: 0 73px;
-                width: 100%
+                @include size(100%);
             }
 
             @include viewport-sm {
@@ -183,8 +183,8 @@ img {
 
     &-img{
         @include flex(flex, space-between, null);
-    width: 100%;
-    column-gap: 10px;
+        @include size(100%);
+    gap: 10px;
 
     @include viewport-sm {
         flex-direction: column;
@@ -194,25 +194,20 @@ img {
 
 
 .top-place-card {
-    position: relative;
     overflow: hidden;
+    @include position(relative);
 
     &-title {
-        position: absolute;
-        bottom: 29px;
-        left: 27px;
         z-index: 2;
+        @include position(absolute,null,null,29px,27px);
     }
 
 
     &::after {
         content: "";
+        @include position(absolute,0,null,null,0);
         background-color: $color-eerieb-black;
-        position: absolute;
-        left: 0px;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        @include size(100%,100%);
         transition: .5s ease all;
 
     }
@@ -259,12 +254,12 @@ img {
 
 
         &-description {
-            width: 80%;
+            @include size(80%);
             margin: 45px 0 58px 0;
 
             @include viewport-sm {
                 margin: 20px 0;
-                width: 100%;
+                @include size(100%);
             }
         }
 
@@ -273,21 +268,21 @@ img {
 
             .place-info-content-description {
                 margin: 20px 0;
-                width: 100%;
+                @include size(100%);
             }
         }
     }
 
     &-image {
-        width: 100%;
+        @include size(100%);
     }
 
 
     @include viewport-sm {
-        @include display(block);
+        display: block;
 
         .place-info-content-heading br {
-            @include display(none);
+            display: none;
         }
     }
 }
@@ -303,5 +298,5 @@ img {
 iframe {
     object-fit: cover;
     display: block;
-    width: 100%;
+    @include size(100%);
 }

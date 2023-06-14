@@ -26,12 +26,12 @@
     }
 
     &-md{
-        @include font($font-family,$heading-md,$color-yankees-blue,null);
+        @include font($font-family,$heading-md,$color-yankees-blue,0.5);
 
         &::after{
             content: "";
-            width:52%;
-            @include display(inline-block);
+            @include size(52%);
+            display: inline-block;
             border-bottom: 2px solid #1b7dff;
             margin-top: 8px;
     

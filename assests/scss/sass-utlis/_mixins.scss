@@ -14,12 +14,18 @@
     align-items:$align-items;
 }
 
-  @mixin transition{
-    transition: all 0.3s ease-in-out;
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
-@mixin display ($value){
-    display:$value;
+@mixin size($width:null,$height:null){
+
+  width: $width;
+  height: $height;
 }
 
 

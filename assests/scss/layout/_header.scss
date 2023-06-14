@@ -1,42 +1,39 @@
 
 .header {
-    position: fixed;
-    width: 100%;
+    // width: 100%;
+    @include size(100%);
     z-index: 3;
-    top: 0;
     padding: 20px 0;
+    @include position(fixed,0);
 
    @include viewport-lg {
         background-color: $color-dark-black;
+        padding: 0
     }
 }
 
 .navbar {
     @include flex(flex,space-between,center);
     flex-direction: row;
-    width: 100%;
+    @include size(100%);
     margin: auto;
 
     .show__nav {
-        height: calc(212px + 30px); // js related 
+        @include size(null,calc(212px + 30px));
         @include flex(flex,null,null);
         flex-direction: column;
     }
 
    @include viewport-lg {
         &-bg-show {
-            top: calc(100% - 10px);
-            position: absolute;
-            height: 0;
-            width: 100vw;
-            left: 0;
+            @include size(100vw,0);
+            @include position(absolute,calc(100% - 10px),null,null,0);
             
 
             .show__nav {
                 @include flex(flex,space-evenly,center);
                 flex-direction: column;
-                left: 0;
-                height: 700px;
+                @include size(null,700px);
                 background-color: $color-dark-black;
                 opacity: 1;
                 visibility: visible;
@@ -78,19 +75,19 @@
 }
 
 .menu-icon {
-    position: relative;
+    @include position(relative);
     cursor: pointer;
     z-index: 1;
-    @include display(none);
+    display: none;
 
     @include viewport-sm {
-        @include display(block);
+        display: block;
     }
 
 }
 
 .menu-btn {
-    @include display(none);
+    display: none;
 }
 
 
@@ -98,14 +95,15 @@
 .burger_menu {
     cursor: pointer;
     padding:30px 20px;
-    @include display(none);
+    display: none;
+    background: transparent;
+    border: 0;
 
     &-lines{
         background: $color-white;
-        height: 3px;
-        width: 32px;
-        @include display(block);
-        position: relative;
+        @include size(32px,3px);
+        display: block;
+        @include position(relative);
         transition:all ease 0.1s;
 
         &::after{
@@ -120,7 +118,7 @@
     }
 
    @include viewport-lg{
-        @include display(inline-block)
+    display: inline-block;
     }
   }
 

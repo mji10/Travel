@@ -1,10 +1,10 @@
 %btn{
     background: $color-blue;
     color: white;
-    @include display(inline-block);
+    display: inline-block;
     overflow: hidden;
     padding: 15px 45px 15px 40px;
-    position: relative;
+    @include position(relative);
     text-decoration: none;
     transition: 0.4s ease;
     border:none;
@@ -14,18 +14,16 @@
       background: $color-dark-black;
       transition: 0.3s ease;
       content: '';
-      position: absolute;
+      @include position(absolute);
       z-index: -1;
     }
   }
 
 %mobile-navbar-hamburger{
+  content: '';
     background: $color-white;
-      height: 3px;
-      width: 32px;
-      @include display(block);
-      position: absolute;
-      content: '';
-      left: 0;
+      @include size(32px,3px);
+      display: block;
+      @include position(absolute,null,null,null,0);
       transition:all ease 0.2s;
   }

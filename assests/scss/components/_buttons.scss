@@ -12,22 +12,20 @@
     font-family: $font-family;
 
     @include viewport-sm{
-        width:100%;
+        @include size(100%);
         text-align:center;
     }
 }
 
 .top-left {
     &:before {
-      top: 0;
-      bottom: 0;
-      left: -125%;
+        @include position(null,0,null,0,-125%);
       transform: skewX(-45deg);
-      width: 100%;
+      @include size(100%);
     }
     &:hover {
       &:before {
-        width: 250%;
+        @include size(250%);
         border-color: $color-dark-black;
       }
     }
@@ -42,7 +40,7 @@
     text-align: center;
 
     &::after {
-        @include display(inline-block);
+        display: inline-block;
        margin-left: 26px;
         content: "\0279E"; // arrow right unicode
         transition: transform 0.3s ease-out;
@@ -58,9 +56,9 @@
 }
 
 .mb-link{
-   @include display(none);
+    display: none;
 @include viewport-sm{
-    @include display(block);
+    display: block;
 }
 }
 
